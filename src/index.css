@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Comfortaa", cursive;
+  --color-primary: #5271FE;
+  --color-secondary: #6A5FE8;
+  --color-accent: #f0f4ff;
+  --color-dark: #1a1c1e;
+  --color-light: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-dark font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display;
+}
+
+.section-padding {
+  @apply py-24 px-6 md:px-12 lg:px-24;
+}
+
+.card {
+  @apply bg-white rounded-[40px] p-10 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-10 py-4 rounded-2xl font-bold transition-all hover:bg-secondary hover:shadow-xl hover:shadow-primary/20 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary px-10 py-4 rounded-2xl font-bold transition-all hover:bg-primary hover:text-white active:scale-95;
+}
+
+.heading-1 {
+  @apply text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight;
+}
+
+.heading-2 {
+  @apply text-4xl md:text-5xl font-bold mb-8 tracking-tight;
+}
+
+.text-muted {
+  @apply text-gray-700 leading-relaxed;
+}
